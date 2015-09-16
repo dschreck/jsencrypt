@@ -28,12 +28,8 @@ module.exports = function(grunt) {
   ];
 
   // The code to wrap the generated files with.
-  var prefix = 'var JSEncryptExports = {};' + "\n";
-  prefix += '(function(exports) {' + "\n";
-
-  var suffix = 'exports.JSEncrypt = JSEncrypt;' + "\n";
-  suffix += '})(JSEncryptExports);' + "\n";
-  suffix += 'var JSEncrypt = JSEncryptExports.JSEncrypt;' + "\n";
+  var prefix = 'module.exports = (function() {' + "\n";
+  var suffix = 'return JSEncrypt;})();' + "\n";
 
   // Project configuration.
   grunt.initConfig({

@@ -1,5 +1,4 @@
-var JSEncryptExports = {};
-(function(exports) {
+module.exports = (function() {
 // Copyright (c) 2005  Tom Wu
 // All Rights Reserved.
 // See "LICENSE" for details.
@@ -4169,6 +4168,4 @@ JSEncrypt.prototype.getPublicKeyB64 = function () {
   return this.getKey().getPublicBaseKeyB64();
 };
 
-exports.JSEncrypt = JSEncrypt;
-})(JSEncryptExports);
-var JSEncrypt = JSEncryptExports.JSEncrypt;
+return JSEncrypt;})();
